@@ -1,0 +1,112 @@
+<html>
+
+<head>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+
+    <style>
+        .row{
+            width: 635px;
+            margin: 1px auto 1px auto ;
+        }
+
+        .image-container {
+            display: table-cell;
+            vertical-align: middle;
+            padding: 5px;
+        }
+    </style>
+
+</head>
+
+<body style="background-color: rgb(61, 61, 61);">
+  
+<div class="row">
+    <div class="image-container"><img id="BBoy" src="img/BBoy.png" onmousedown="this.src='img/BBoyClicked.png';" onmouseup="this.src='img/BBoy.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="Litefeet" src="img/Litefeet.png" onmousedown="this.src='img/LitefeetClicked.png';" onmouseup="this.src='img/Litefeet.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="Ballroom" src="img/Ballroom.png" onmousedown="this.src='img/BallroomClicked.png';" onmouseup="this.src='img/Ballroom.png';" height="200" width="200"/></div>
+</div>
+
+<div class="row">
+    <div class="image-container"><img id="Locking" src="img/Locking.png" onmousedown="this.src='img/LockingClicked.png';" onmouseup="this.src='img/Locking.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="TapDance" src="img/TapDance.png" onmousedown="this.src='img/TapDanceClicked.png';" onmouseup="this.src='img/TapDance.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="HipHop" src="img/HipHop.png" onmousedown="this.src='img/HipHopClicked.png';" onmouseup="this.src='img/HipHop.png';" height="200" width="200"/></div>
+</div>
+
+<div class="row">
+    <div class="image-container"><img id="Waacking" src="img/Waacking.png" onmousedown="this.src='img/WaackingClicked.png';" onmouseup="this.src='img/Waacking.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="Ballet" src="img/Ballet.png" onmousedown="this.src='img/BalletClicked.png';" onmouseup="this.src='img/Ballet.png';" height="200" width="200"/></div>
+    <div class="image-container"><img id="Popping" src="img/Popping.png" onmousedown="this.src='img/PoppingClicked.png';" onmouseup="this.src='img/Popping.png';" height="200" width="200"/></div>
+</div>
+
+<script>
+
+    var sound1 = new buzz.sound("sound/BBoy.mp3");
+    var sound2 = new buzz.sound("sound/Litefeet.mp3");
+    var sound3 = new buzz.sound("sound/Ballroom.mp3");
+    var sound4 = new buzz.sound("sound/Locking.mp3");
+    var sound5 = new buzz.sound("sound/TapDance.mp3");
+    var sound6 = new buzz.sound("sound/HipHop.mp3");
+    var sound7 = new buzz.sound("sound/Waacking.mp3");
+    var sound8 = new buzz.sound("sound/Ballet.mp3");
+    var sound9 = new buzz.sound("sound/Popping.mp3");
+
+    window.onload = function() {
+                document.getElementById('BBoy').addEventListener('mousedown',  function () { play("sound1");});  
+                document.getElementById('Litefeet').addEventListener('mousedown', function () { play("sound2");});
+                document.getElementById('Ballroom').addEventListener('mousedown', function () { play("sound3");});
+                document.getElementById('Locking').addEventListener('mousedown', function () { play("sound4");});  
+                document.getElementById('TapDance').addEventListener('mousedown', function () { play("sound5");});
+                document.getElementById('HipHop').addEventListener('mousedown', function () { play("sound6");});
+                document.getElementById('Waacking').addEventListener('mousedown', function () { play("sound7");});  
+                document.getElementById('Ballet').addEventListener('mousedown', function () { play("sound8");});
+                document.getElementById('Popping').addEventListener('mousedown', function () { play("sound9");});
+    }
+
+    function play(item){
+        sound1.pause();
+        sound2.pause();
+        sound3.pause();
+        sound4.pause();
+        sound5.pause();
+        sound6.pause();
+        sound7.pause();
+        sound8.pause();
+        sound9.pause();
+
+
+        if(item == "sound1"){
+            sound1.play();
+        } 
+        if(item == "sound2"){
+            sound2.play();
+        }
+        if(item == "sound3"){
+            sound3.play();
+        }
+        if(item == "sound4"){
+            sound4.play();
+        }
+        if(item == "sound5"){
+            sound5.play();
+        }
+        if(item == "sound6"){
+            sound6.play();
+        }
+        if(item == "sound7"){
+            sound7.play();
+        }
+        if(item == "sound8"){
+            sound8.play();
+        }
+        if(item == "sound9"){
+            sound9.play();
+        }
+    }
+
+</script>
+
+</body>
+
+
+</html>
